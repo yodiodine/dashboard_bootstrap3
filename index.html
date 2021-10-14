@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <!-- font awesome -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+    />
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
+    <!-- chartjs -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-wrap">
+            <ul class="status">
+                <li class="profile dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="user-image">
+                            <img src="default-user-icon.jpg" alt="user-image">
+                            <div class="status-circle"></div>
+                        </span>
+                        Donald Duck
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">온라인</a></li>
+                        <li><a class="dropdown-item" href="#">자리 비움</a></li>
+                        <li><a class="dropdown-item" href="#">회의 중</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#"><strong>로그아웃</strong></a></li>
+                    </ul>
+                </li>
+                <li class="alarm">
+                    <button type="button" class="btn btn-primary">
+                        <i class="far fa-bell"></i> <span class="badge">99+</span>
+                    </button>
+                </li>
+                <li class="direct-message">
+                    <button type="button" class="btn btn-primary">
+                        <i class="far fa-comment-alt"></i> <span class="badge">5</span>
+                    </button>
+                </li>
+            </ul>
+            <nav>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">종합 통계</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">사용자 문의</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">접속 히스토리</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">마이 페이지</a>
+                    </li>
+                  </ul>
+            </nav>
+        </div>
+    </header>
+    <div id="main-container">
+        <div class="container-wrap">
+            <div class="row">
+                <div class="col-9 weekly-data">
+                    <div class="col-wrap">
+                        <div class="chart-wrap">
+                            <h6>주간 접속자 현황</h6>
+                            <canvas id="weekly-data-chart"></canvas>
+                        </div>
+                        <ul class="user-count">
+                            <li><strong>TOTAL</strong></li>
+                            <li>2,908</li>
+                            <li><strong>TODAY</strong></li>
+                            <li>232</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-3 todo">
+                    <div class="col-wrap">
+                        <h6>TO DO</h6>
+                        <ul class="todo-list">
+                            
+                        </ul>
+                        <div class="add-wrap">
+                            <input type="text" placeholder="input your plan">
+                            <button class="add-todo"><i class="fas fa-plus"></i></button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 device-kinds">
+                    <div class="col-wrap">
+                        <div class="chart-wrap">
+                            <h6>접속 디바이스 모델 순위</h6>
+                            <canvas id="device-kinds-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-5 history">
+                    <div class="col-wrap">
+                        <h6>접속 히스토리</h6>
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td class="history-name">Micky Mouse</td>
+                                    <td>010-1234-5678</td>
+                                    <td>Disney Coperation</td>
+                                    <td>123-45-12345</td>
+                                </tr>
+                                <tr>
+                                    <td class="history-name">Donald Duck</td>
+                                    <td>010-1234-5678</td>
+                                    <td>lolo Coperation</td>
+                                    <td>123-45-12345</td>
+                                </tr>
+                                <tr>
+                                    <td class="history-name">Mini Mouse</td>
+                                    <td>010-6345-5678</td>
+                                    <td>Disney Coperation</td>
+                                    <td>123-45-12345</td>
+                                </tr>
+                                <tr>
+                                    <td class="history-name">Micky Mouse</td>
+                                    <td>010-7774-5678</td>
+                                    <td>TT Coperation</td>
+                                    <td>123-45-12345</td>
+                                </tr>
+                                <tr>
+                                    <td class="history-name">Micky Mouse</td>
+                                    <td>010-1564-5678</td>
+                                    <td>Disney Coperation</td>
+                                    <td>123-45-12345</td>
+                                </tr>
+                                <tr>
+                                    <td class="history-name">Donald Duck</td>
+                                    <td>010-2332-5678</td>
+                                    <td>Dduck Coperation</td>
+                                    <td>123-45-12345</td>
+                                </tr>
+                                <tr>
+                                    <td class="history-name">Mini Mouse</td>
+                                    <td>010-4573-5678</td>
+                                    <td>TT Coperation</td>
+                                    <td>123-45-12345</td>
+                                </tr>
+                                <tr>
+                                    <td class="history-name">Micky Mouse</td>
+                                    <td>010-1534-5678</td>
+                                    <td>Disney Coperation</td>
+                                    <td>123-45-12345</td>
+                                </tr>
+                                <tr>
+                                    <td class="history-name">Mini Mouse</td>
+                                    <td>010-8655-5678</td>
+                                    <td>abcd Coperation</td>
+                                    <td>123-45-12345</td>
+                                </tr>
+                                <tr>
+                                    <td class="history-name">Micky Mouse</td>
+                                    <td>010-0876-5678</td>
+                                    <td>Disney Coperation</td>
+                                    <td>123-45-12345</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col contact-msg">
+                    <span class="view-more">···</span>
+                    <div class="col-wrap">
+                        <h6>사용자 문의</h6>
+                        <ul>
+                            <li>
+                                <div class="contact-user">
+                                    <img src="default-user-icon.jpg" alt="contact-user-image">
+                                    Donald duck
+                                </div>
+                                <div class="contact-content">
+                                    어플리케이션이 너무 불안정합니다. 새로고침을 하면 앱이 꺼지는 일이 너무 많아요! 제 디바이스 뿐만 아니라 제 친구도 이렇다고 해요
+                                </div>
+                            </li>
+                            <li>
+                                <div class="contact-user">
+                                    <img src="default-user-icon.jpg" alt="contact-user-image">
+                                    Micky Mouse
+                                </div>
+                                <div class="contact-content">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Est asperiores ullam atque inventore asperiores iusto,
+                                     laboriosam nulla nostrum?
+                                </div>
+                            </li>
+                            <li>
+                                <div class="contact-user">
+                                    <img src="default-user-icon.jpg" alt="contact-user-image">
+                                    Mini Mouse
+                                </div>
+                                <div class="contact-content">
+                                     Culpa explicabo ipsa voluptatibus provident.
+                                     Quasi iure sit dolorum beatae fuga porro ratione
+                                     libero eos praesentium tenetur! Alias minus libero cupiditate impedit.
+                                </div>
+                            </li>
+                            <li>
+                                <div class="contact-user">
+                                    <img src="default-user-icon.jpg" alt="contact-user-image">
+                                    Monkey.D.Lupi
+                                </div>
+                                <div class="contact-content">
+                                    eniti eum, error, dicta culpa magnam necessitatibus assumenda
+                                     cum sit ullam officia in.
+                                    Cumque soluta cum error beatae mollitia, natus voluptas deleniti.
+                                </div>
+                            </li>
+                            <li>
+                                <div class="contact-user">
+                                    <img src="default-user-icon.jpg" alt="contact-user-image">
+                                    Donald duck
+                                </div>
+                                <div class="contact-content">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit
+                                     Deleniti eum, error, dicta culpa magnam necessitatibus assumenda
+                                     cum sit ullam officia in.
+                                    Cumque soluta cum error beatae mollitia, natus voluptas deleniti.
+                                </div>
+                            </li>
+                            <li>
+                                <div class="contact-user">
+                                    <img src="default-user-icon.jpg" alt="contact-user-image">
+                                    Micky Mouse
+                                </div>
+                                <div class="contact-content">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Est asperiores ullam atque inventore asperiores iusto,
+                                     laboriosam nulla nostrum?
+                                </div>
+                            </li>
+                            <li>
+                                <div class="contact-user">
+                                    <img src="default-user-icon.jpg" alt="contact-user-image">
+                                    Mini Mouse
+                                </div>
+                                <div class="contact-content">
+                                     Culpa explicabo ipsa voluptatibus provident.
+                                     Quasi iure sit dolorum beatae fuga porro ratione
+                                     libero eos praesentium tenetur! Alias minus libero cupiditate impedit.
+                                </div>
+                            </li>
+                            <li>
+                                <div class="contact-user">
+                                    <img src="default-user-icon.jpg" alt="contact-user-image">
+                                    Monkey.D.Lupi
+                                </div>
+                                <div class="contact-content">
+                                    eniti eum, error, dicta culpa magnam necessitatibus assumenda
+                                     cum sit ullam officia in.
+                                    Cumque soluta cum error beatae mollitia, natus voluptas deleniti.
+                                </div>
+                            </li>
+                            <li>
+                                <div class="contact-user">
+                                    <img src="default-user-icon.jpg" alt="contact-user-image">
+                                    Donald duck
+                                </div>
+                                <div class="contact-content">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit
+                                     Deleniti eum, error, dicta culpa magnam necessitatibus assumenda
+                                     cum sit ullam officia in.
+                                    Cumque soluta cum error beatae mollitia, natus voluptas deleniti.
+                                </div>
+                            </li>
+                            <li>
+                                <div class="contact-user">
+                                    <img src="default-user-icon.jpg" alt="contact-user-image">
+                                    Micky Mouse
+                                </div>
+                                <div class="contact-content">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Est asperiores ullam atque inventore asperiores iusto,
+                                     laboriosam nulla nostrum?
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

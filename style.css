@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+*{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+ul,li{list-style: none;margin: 0;padding: 0;}
+body{
+    background-color: #fafafa;
+    display: flex;
+    color:#4c5270;
+    min-width: 768px;
+}
+body::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+header{
+    background-color: #4c5270;
+    width: 150px;
+    height: 100vh;min-height: 800px;
+    border-bottom-right-radius: 15px;
+}
+header .header-wrap{
+    padding: 10px;
+    text-align: center;
+    height: 100%;
+    position: relative;
+}
+
+header .header-wrap ul.status li.profile button{
+    width: 100%;
+    background-color: transparent;
+    border: 0;
+    color: #eee;
+}
+header .header-wrap ul.status li.profile button .user-image{
+    display: block;
+    position: relative;
+    margin: 10px auto;
+    width: 60px;height: 60px;
+}
+header .header-wrap ul.status li.profile button .user-image img{
+    width: 100%;
+    border-radius: 50px;
+}
+header .header-wrap ul.status li.profile button .user-image .status-circle{
+    width: 10px;height: 10px;
+    border-radius: 50px;
+    border: 2px solid #4c5270;
+    background-color: #00c000;
+    position: absolute;bottom: 0;right: 5px;
+}
+header .header-wrap ul.status li.profile ul.dropdown-menu{
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+header .header-wrap ul.status li.alarm button,
+header .header-wrap ul.status li.direct-message button{
+    background-color: transparent;
+    border: 0;
+}
+header .header-wrap ul.status li.alarm button i,
+header .header-wrap ul.status li.direct-message button i{
+    width:10px;
+    margin:0 10px;
+    color: #eee;
+}
+header .header-wrap ul.status li.alarm button span,
+header .header-wrap ul.status li.direct-message button span{
+    margin: 0 10px;
+    width: 35px;
+    background-color: #f651a0;
+}
+
+header .header-wrap nav{
+    position: absolute;
+    width: 100%;
+    bottom: 50px;left: 50%;transform: translate(-50%);
+}
+header .header-wrap nav ul.nav li{
+    margin: 20px 0;
+    
+}
+header .header-wrap nav ul.nav li a{
+    color: #eee;
+}
+header .header-wrap nav ul.nav li a:hover{
+    color: #bcece0;
+}
+
+#main-container{
+    width: 100%;
+    max-width: 1440px;
+}
+#main-container .container-wrap{
+    position: relative;
+    padding:15px;
+}
+#main-container h6{
+    font-weight: bold;
+}
+#main-container .container-wrap div.row>div{
+    padding:5px;
+}
+#main-container .container-wrap div.row div>.col-wrap{
+    background-color: #fff;
+    border-radius: 25px;
+    box-shadow: 0 0px 20px rgba(76, 82, 112,0.1);
+    padding:15px;
+}
+
+.weekly-data>div{
+    height: 400px;
+    display: flex;
+}
+.weekly-data>div h6{
+    margin-bottom: 20px;
+}
+.weekly-data>div .chart-wrap{
+    width: 85%;
+    height: 300px;
+}
+.weekly-data>div .user-count{
+    width: 15%;
+    text-align: center;
+    align-self: center;
+}
+.weekly-data>div .user-count li{
+    margin: 5px 0;
+}
+.weekly-data>div .user-count li:nth-child(2){
+    margin-bottom: 30px;
+}
+.weekly-data>div .user-count li strong{
+    font-size: 18px;
+}
+
+.todo{}
+.todo>div{
+    position: absolute;
+    width: 23%;
+    height: 710px;
+    top: 20px;
+    right: 10px;
+}
+.todo>div h6{}
+.todo>div .todo-list{
+    width: 100%;
+    height: 85%;
+    padding: 10px;
+    overflow-y: auto;
+}
+.todo>div .todo-list li{
+    background-color: #bcece0;
+    border-radius: 25px;
+    margin: 10px 0;
+    padding: 10px;
+    display: flex;align-items: center;justify-content: space-between;
+}
+.todo>div .todo-list li input{
+    width: 20px;
+}
+.todo>div .todo-list li span{
+    padding: 0 10px;
+}
+.todo>div .todo-list li span:last-child{
+    padding: 0;
+}
+.todo>div .todo-list li .delete{
+    color: #f651a0;
+}
+.todo>div .add-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.todo>div .add-wrap input[type="text"]{
+    width: 80%;
+    border-radius: 25px;
+    outline: none;
+    border:1px solid #4c5270;
+    height: 50px;
+    text-indent: 10px;
+}
+.todo>div .add-wrap .add-todo{
+    display: block;
+    margin: 20px auto;
+    border-radius: 50px;
+    border: none;outline: none;
+    width:45px;height: 45px;
+    background-color: #4c5270;
+    color: #fff;
+}
+
+.device-kinds>div{
+    height: 300px;
+}
+.device-kinds>div .chart-wrap{
+    height: 230px;
+}
+.device-kinds>div .chart-wrap h6{
+    margin-bottom: 20px;
+}
+
+.history>div{
+    height: 300px;
+    overflow-y: auto;
+}
+.history>div h6{
+    margin-bottom: 20px;
+}
+.history>div table tbody tr{
+    color: #777;text-align: center;font-size: 12px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    border-radius: 25px;
+    display: flex;align-items: center;
+    padding:0 5px;
+    margin: 10px 0;
+}
+.history>div table tbody tr td{
+    width: 25%;
+}
+.history>div table tbody tr .history-name{
+    font-weight: bold;
+    color:#4c5270
+}
+tbody, td, tfoot, th, thead, tr {
+    border-style: hidden;
+}
+
+.contact-msg{
+    position: relative;
+}
+.contact-msg .view-more{
+    position: absolute;top: 20px;right: 30px;
+    display: flex;justify-content: center;align-items: center;
+    width: 40px;height: 40px;
+    background-color: #fff;
+    border-radius: 50px;
+    border: 1px solid rgba(0,0,0,0.2);
+    z-index: 1;
+    cursor: pointer;
+}
+.contact-msg>div{
+    position: relative;
+    width:100%;
+    height: 300px;
+    overflow-x: auto;
+}
+
+.contact-msg>div h6{
+    margin-bottom: 20px;
+}
+.contact-msg>div ul{
+    width: 3300px;
+    position: absolute;
+}
+.contact-msg>div ul li{
+    margin: 10px;
+    padding: 10px;
+    width: 300px;height: 200px;
+    float: left;
+    cursor: pointer;
+    box-shadow: 0 0 3px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+.contact-msg>div ul li:hover{
+    transform: scale(1.05);
+    transition: .3s;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.contact-msg>div ul li .contact-user{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.contact-msg>div ul li .contact-user img{
+    width: 50px;height: 50px;
+}
+.contact-msg>div ul li .contact-content{
+    width: 250px;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+}
+
+
+@media screen and (max-width:1440px) {
+    .todo>div .todo-list li{
+        font-size: 14px;
+    }
+    .todo>div .add-wrap input[type="text"]{
+        max-width: 200px;
+        height: 35px;
+        font-size: 14px;
+    }
+    .todo>div .add-wrap .add-todo{
+        width:35px;height: 35px;
+    }
+}
+@media screen and (max-width:1024px) {
+    h6{
+        text-align: center;
+    }
+    .contact-msg>div h6{
+        text-align: left;
+    }
+
+    .history>div table tbody tr{
+        flex-direction: column;
+    }
+    .history>div table tbody tr td{
+        width: 100%;
+    }
+    .todo>div .todo-list li{
+        height: 100px;
+        font-size: 12px;
+    }
+    .todo>div .add-wrap{
+        flex-direction: column;
+    }
+    .todo>div .add-wrap input[type="text"]{
+        width: 90%;
+        font-size: 12px;
+        text-indent: 5px;
+    }
+    .todo>div .add-wrap .add-todo{
+        width:90%;
+        margin: 5px 0;
+    }
+
+}
