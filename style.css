@@ -16,6 +16,8 @@ body::after{
     clear: both;
 }
 header{
+    position: fixed;
+    z-index: 1;
     background-color: #4c5270;
     width: 150px;
     height: 100vh;min-height: 800px;
@@ -91,6 +93,7 @@ header .header-wrap nav ul.nav li a:hover{
 #main-container{
     width: 100%;
     max-width: 1440px;
+    padding-left: 150px;
 }
 #main-container .container-wrap{
     position: relative;
