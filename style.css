@@ -8,7 +8,7 @@ body{
     background-color: #fafafa;
     display: flex;
     color:#4c5270;
-    min-width: 768px;
+    min-width: 1024px;
 }
 body::after{
     content: '';
@@ -111,6 +111,15 @@ header .header-wrap nav ul.nav li a:hover{
     box-shadow: 0 0px 20px rgba(76, 82, 112,0.1);
     padding:15px;
 }
+.device-kinds>div{
+    height: 400px;
+}
+.device-kinds>div .chart-wrap{
+    height: 330px;
+}
+.device-kinds>div .chart-wrap h6{
+    margin-bottom: 20px;
+}
 
 .weekly-data>div{
     height: 400px;
@@ -138,20 +147,131 @@ header .header-wrap nav ul.nav li a:hover{
     font-size: 18px;
 }
 
-.todo{}
-.todo>div{
-    position: absolute;
-    width: 23%;
-    height: 710px;
-    top: 20px;
-    right: 10px;
+.history>div{
+    height: 600px;
+    overflow-y: hidden;
 }
-.todo>div h6{}
+
+.history>div h6{
+    margin-bottom: 20px;
+}
+.history>div>div{
+    padding: 0 5px;
+    overflow-y: auto;
+    height: 90%;
+}
+.history>div>div::-webkit-scrollbar{
+    width: 5px;
+    background-color: transparent;
+}
+.history>div>div::-webkit-scrollbar-thumb{
+    width: 5px;
+    background-color: #4c5270;
+    border-radius: 10px;
+}
+.history>div>div table tbody tr{
+    color: #777;text-align: center;font-size: 12px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    border-radius: 25px;
+    display: flex;align-items: center;
+    padding:0 5px;
+    margin: 10px 0;
+}
+.history>div>div table tbody tr td{
+    width: 25%;
+}
+.history>div>div table tbody tr .history-name{
+    font-weight: bold;
+    color:#4c5270
+}
+tbody, td, tfoot, th, thead, tr {
+    border-style: hidden;
+}
+
+.contact-msg{
+    position: relative;
+}
+.contact-msg h6{
+    margin-bottom: 20px;
+}
+.contact-msg .view-more{
+    position: absolute;top: 20px;right: 30px;
+    display: flex;justify-content: center;align-items: center;
+    width: 40px;height: 40px;
+    background-color: #fff;
+    border-radius: 50px;
+    border: 1px solid rgba(0,0,0,0.2);
+    z-index: 1;
+    cursor: pointer;
+}
+.contact-msg>div{
+    height: 600px;
+    overflow-y: hidden;
+}
+.contact-msg>div ul::-webkit-scrollbar{
+    width: 5px;
+    background-color: transparent;
+    
+}
+.contact-msg>div ul::-webkit-scrollbar-thumb{
+    width: 5px;
+    background-color: #4c5270;
+    border-radius: 10px;
+}
+.contact-msg>div ul{
+    padding: 0 10px;
+    overflow-y: auto;
+    height: 90%;
+}
+.contact-msg>div ul li{
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 3px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+.contact-msg>div ul li:first-child{
+    margin-top: 10px;
+}
+.contact-msg>div ul li:hover{
+    transform: scale(1.05);
+    transition: .3s;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.contact-msg>div ul li .contact-user{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.contact-msg>div ul li .contact-user img{
+    width: 50px;height: 50px;
+}
+.contact-msg>div ul li .contact-content{
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+    font-size: 14px;
+}
+
+.todo>div{
+    height: 600px;
+}
 .todo>div .todo-list{
     width: 100%;
-    height: 85%;
+    height: 80%;
     padding: 10px;
     overflow-y: auto;
+}
+.todo>div .todo-list::-webkit-scrollbar{
+    width: 5px;
+    background-color: transparent;
+    
+}
+.todo>div .todo-list::-webkit-scrollbar-thumb{
+    width: 5px;
+    background-color: #4c5270;
+    border-radius: 10px;
 }
 .todo>div .todo-list li{
     background-color: #bcece0;
@@ -195,141 +315,16 @@ header .header-wrap nav ul.nav li a:hover{
     color: #fff;
 }
 
-.device-kinds>div{
-    height: 300px;
-}
-.device-kinds>div .chart-wrap{
-    height: 230px;
-}
-.device-kinds>div .chart-wrap h6{
-    margin-bottom: 20px;
-}
-
-.history>div{
-    height: 300px;
-    overflow-y: auto;
-}
-.history>div h6{
-    margin-bottom: 20px;
-}
-.history>div table tbody tr{
-    color: #777;text-align: center;font-size: 12px;
-    box-shadow: 0 0 8px rgba(0,0,0,0.1);
-    border-radius: 25px;
-    display: flex;align-items: center;
-    padding:0 5px;
-    margin: 10px 0;
-}
-.history>div table tbody tr td{
-    width: 25%;
-}
-.history>div table tbody tr .history-name{
-    font-weight: bold;
-    color:#4c5270
-}
-tbody, td, tfoot, th, thead, tr {
-    border-style: hidden;
-}
-
-.contact-msg{
-    position: relative;
-}
-.contact-msg .view-more{
-    position: absolute;top: 20px;right: 30px;
-    display: flex;justify-content: center;align-items: center;
-    width: 40px;height: 40px;
-    background-color: #fff;
-    border-radius: 50px;
-    border: 1px solid rgba(0,0,0,0.2);
-    z-index: 1;
-    cursor: pointer;
-}
-.contact-msg>div{
-    position: relative;
-    width:100%;
-    height: 300px;
-    overflow-x: auto;
-}
-
-.contact-msg>div h6{
-    margin-bottom: 20px;
-}
-.contact-msg>div ul{
-    width: 3300px;
-    position: absolute;
-}
-.contact-msg>div ul li{
-    margin: 10px;
-    padding: 10px;
-    width: 300px;height: 200px;
-    float: left;
-    cursor: pointer;
-    box-shadow: 0 0 3px rgba(0,0,0,0.1);
-    border-radius: 10px;
-}
-.contact-msg>div ul li:hover{
-    transform: scale(1.05);
-    transition: .3s;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-.contact-msg>div ul li .contact-user{
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-.contact-msg>div ul li .contact-user img{
-    width: 50px;height: 50px;
-}
-.contact-msg>div ul li .contact-content{
-    width: 250px;
-    display: -webkit-box;
-    -webkit-line-clamp: 5;
-    -webkit-box-orient: vertical;  
-    overflow: hidden;
-}
-
-
 @media screen and (max-width:1440px) {
     .todo>div .todo-list li{
         font-size: 14px;
     }
     .todo>div .add-wrap input[type="text"]{
-        max-width: 200px;
+        max-width: 350px;
         height: 35px;
         font-size: 14px;
     }
     .todo>div .add-wrap .add-todo{
         width:35px;height: 35px;
     }
-}
-@media screen and (max-width:1024px) {
-    h6{
-        text-align: center;
-    }
-    .contact-msg>div h6{
-        text-align: left;
-    }
-
-    .history>div table tbody tr{
-        flex-direction: column;
-    }
-    .history>div table tbody tr td{
-        width: 100%;
-    }
-    .todo>div .todo-list li{
-        height: 100px;
-        font-size: 12px;
-    }
-    .todo>div .add-wrap{
-        flex-direction: column;
-    }
-    .todo>div .add-wrap input[type="text"]{
-        width: 90%;
-        font-size: 12px;
-        text-indent: 5px;
-    }
-    .todo>div .add-wrap .add-todo{
-        width:90%;
-        margin: 5px 0;
-    }
-
 }
