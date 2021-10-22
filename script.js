@@ -97,6 +97,11 @@ window.onload = function(){
     addBtn.addEventListener("click",function(){
         textValue.value ? checkOverLap() : alert("할 일을 입력하세요");
     })
+    textValue.addEventListener("keyup",function(e){
+        if(e.keyCode === 13){
+            textValue.value ? checkOverLap() : alert("할 일을 입력하세요");
+        }
+    })
 
     function checkOverLap(){
         let check = false;
