@@ -72,7 +72,15 @@
     <div id="main-container">
         <div class="container-wrap">
             <div class="row">
-                <div class="col-9 weekly-data">
+                <div class="col-4 device-kinds">
+                    <div class="col-wrap">
+                        <div class="chart-wrap">
+                            <h6>접속 디바이스 모델 순위</h6>
+                            <canvas id="device-kinds-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-8 weekly-data">
                     <div class="col-wrap">
                         <div class="chart-wrap">
                             <h6>주간 접속자 현황</h6>
@@ -86,101 +94,82 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-3 todo">
-                    <div class="col-wrap">
-                        <h6>TO DO</h6>
-                        <ul class="todo-list">
-                            
-                        </ul>
-                        <div class="add-wrap">
-                            <input type="text" placeholder="input your plan">
-                            <button class="add-todo"><i class="fas fa-plus"></i></button>
-                        </div>
-                        
-                    </div>
-                </div>
+                
             </div>
             <div class="row">
-                <div class="col-sm-4 device-kinds">
-                    <div class="col-wrap">
-                        <div class="chart-wrap">
-                            <h6>접속 디바이스 모델 순위</h6>
-                            <canvas id="device-kinds-chart"></canvas>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-5 history">
+                
+                <div class="col-4 history">
                     <div class="col-wrap">
                         <h6>접속 히스토리</h6>
-                        <table class="table">
-                            <tbody>
-                                <tr>
-                                    <td class="history-name">Micky Mouse</td>
-                                    <td>010-1234-5678</td>
-                                    <td>Disney Coperation</td>
-                                    <td>123-45-12345</td>
-                                </tr>
-                                <tr>
-                                    <td class="history-name">Donald Duck</td>
-                                    <td>010-1234-5678</td>
-                                    <td>lolo Coperation</td>
-                                    <td>123-45-12345</td>
-                                </tr>
-                                <tr>
-                                    <td class="history-name">Mini Mouse</td>
-                                    <td>010-6345-5678</td>
-                                    <td>Disney Coperation</td>
-                                    <td>123-45-12345</td>
-                                </tr>
-                                <tr>
-                                    <td class="history-name">Micky Mouse</td>
-                                    <td>010-7774-5678</td>
-                                    <td>TT Coperation</td>
-                                    <td>123-45-12345</td>
-                                </tr>
-                                <tr>
-                                    <td class="history-name">Micky Mouse</td>
-                                    <td>010-1564-5678</td>
-                                    <td>Disney Coperation</td>
-                                    <td>123-45-12345</td>
-                                </tr>
-                                <tr>
-                                    <td class="history-name">Donald Duck</td>
-                                    <td>010-2332-5678</td>
-                                    <td>Dduck Coperation</td>
-                                    <td>123-45-12345</td>
-                                </tr>
-                                <tr>
-                                    <td class="history-name">Mini Mouse</td>
-                                    <td>010-4573-5678</td>
-                                    <td>TT Coperation</td>
-                                    <td>123-45-12345</td>
-                                </tr>
-                                <tr>
-                                    <td class="history-name">Micky Mouse</td>
-                                    <td>010-1534-5678</td>
-                                    <td>Disney Coperation</td>
-                                    <td>123-45-12345</td>
-                                </tr>
-                                <tr>
-                                    <td class="history-name">Mini Mouse</td>
-                                    <td>010-8655-5678</td>
-                                    <td>abcd Coperation</td>
-                                    <td>123-45-12345</td>
-                                </tr>
-                                <tr>
-                                    <td class="history-name">Micky Mouse</td>
-                                    <td>010-0876-5678</td>
-                                    <td>Disney Coperation</td>
-                                    <td>123-45-12345</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div>
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <td class="history-name">Micky Mouse</td>
+                                        <td>010-1234-5678</td>
+                                        <td>Disney Coperation</td>
+                                        <td>123-45-12345</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="history-name">Donald Duck</td>
+                                        <td>010-1234-5678</td>
+                                        <td>lolo Coperation</td>
+                                        <td>123-45-12345</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="history-name">Mini Mouse</td>
+                                        <td>010-6345-5678</td>
+                                        <td>Disney Coperation</td>
+                                        <td>123-45-12345</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="history-name">Micky Mouse</td>
+                                        <td>010-7774-5678</td>
+                                        <td>TT Coperation</td>
+                                        <td>123-45-12345</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="history-name">Micky Mouse</td>
+                                        <td>010-1564-5678</td>
+                                        <td>Disney Coperation</td>
+                                        <td>123-45-12345</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="history-name">Donald Duck</td>
+                                        <td>010-2332-5678</td>
+                                        <td>Dduck Coperation</td>
+                                        <td>123-45-12345</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="history-name">Mini Mouse</td>
+                                        <td>010-4573-5678</td>
+                                        <td>TT Coperation</td>
+                                        <td>123-45-12345</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="history-name">Micky Mouse</td>
+                                        <td>010-1534-5678</td>
+                                        <td>Disney Coperation</td>
+                                        <td>123-45-12345</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="history-name">Mini Mouse</td>
+                                        <td>010-8655-5678</td>
+                                        <td>abcd Coperation</td>
+                                        <td>123-45-12345</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="history-name">Micky Mouse</td>
+                                        <td>010-0876-5678</td>
+                                        <td>Disney Coperation</td>
+                                        <td>123-45-12345</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col contact-msg">
+                <div class="col-4 contact-msg">
                     <span class="view-more">···</span>
                     <div class="col-wrap">
                         <h6>사용자 문의</h6>
@@ -296,6 +285,17 @@
                                 </div>
                             </li>
                         </ul>
+                    </div>
+                </div>
+                <div class="col-4 todo">
+                    <div class="col-wrap">
+                        <h6>TO DO</h6>
+                        <ul class="todo-list">
+                        </ul>
+                        <div class="add-wrap">
+                            <input type="text" placeholder="input your plan">
+                            <button class="add-todo"><i class="fas fa-plus"></i></button>
+                        </div>
                     </div>
                 </div>
             </div>
